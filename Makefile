@@ -1,8 +1,8 @@
 UNAME = $(shell uname)
 CC = gcc
-CFLAGS = -g -Wall -O2
+CFLAGS = -g -Wall -O2 -fcommon
 LIBS = -lz
-OFILES = util.o keywords.o flasm.o unflasm.o lex.yy.o assembler.tab.o keywords.c
+OFILES = util.o keywords.o flasm.o unflasm.o lex.yy.o assembler.tab.o
 GARBAGE = assembler.tab.* lex.yy.c memwatch.o gmon.out memwatch.log core
 
 # if make debug, include memwatch and all symbols

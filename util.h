@@ -8,6 +8,8 @@ All rights reserved. See LICENSE.TXT for terms of use.
 #define	UTIL_H_INCLUDED
 
 #include <stdio.h>
+#include <stddef.h>
+
 #include <stdint.h>
 
 #define	FLASM_VERSION		"1.63"
@@ -47,7 +49,8 @@ struct keyword {
     int token;
 };
 
-extern struct keyword *in_word_set(register const char *str, register unsigned int len);
+struct keyword *in_word_set(register const char *str,
+                            register size_t len);
 
 void checkByteOrder(void);
 int longintCompare(const void *ap, const void *bp);
